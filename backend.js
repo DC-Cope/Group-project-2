@@ -26,7 +26,7 @@ var db = pgp({
   database: process.env.DB_NAME,
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
-  password: process.dnv.DB_PASS
+  password: process.env.DB_PASSWORD
 });
 
 
