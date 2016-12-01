@@ -115,11 +115,6 @@ app.controller('ProfileController', function($scope, copeService, $stateParams, 
     };
 });
 
-app.controller('ChatController', function() {
-
-  socketChat(username, listener, paired);
-})
-
 app.controller('SignUpController', function($scope, copeService, $stateParams, $state, $cookies, $rootScope) {
   $scope.submitSignup = function() {
     // assign $scope values to key: value pairs for data insertion (on the backend)
