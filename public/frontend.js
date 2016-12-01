@@ -51,7 +51,7 @@ app.factory('copeService', function($http, $cookies, $rootScope, $state) {
   // Signup Service
   service.signupPageCall = function(data) {
     // Define route url as it is in the backend.js file
-    var url = 'http://localhost:3000/signup';
+    var url = '/signup';
     return $http({
       method: 'POST',
       url: url,
@@ -61,7 +61,7 @@ app.factory('copeService', function($http, $cookies, $rootScope, $state) {
 
   // Login Service
   service.loginPageCall = function(data) {
-    var url = 'http://localhost:3000/login';
+    var url = '/login';
     return $http({
       method: 'POST',
       url: url,
