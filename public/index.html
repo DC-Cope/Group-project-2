@@ -14,13 +14,15 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
+    <div ng-app="cope"> <!-- moved ng-app up to encompass logout button-->
     <div class="row">
       <div class="col-xs-12 nav">
-        <img src="cope.png" width="200px" alt="logo" />
+        <a ui-sref="home"><img src="cope.png" width="200px" alt="logo" /></a>
+        <button class="btn btn-primary pull-right" ng-click="logout()" >Log Out</button>
       </div>
     </div>
 
-    <div ng-app="cope">
+
       <ui-view></ui-view>
     </div>
     <!-- <div id="contentWrap">
