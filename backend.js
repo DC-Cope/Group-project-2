@@ -45,10 +45,13 @@ app.post('/signup', function(req, res) {
     }
     //If info is valid, it inserts info into database
     else {
-      db.query('INSERT INTO copee VALUES (default, $1, $2, $3, $4, $5, default, default)', [userInfo.username, userInfo.email, hash, userInfo.first_name, userInfo.last_name]);
+      db.query('INSERT INTO copee VALUES (default, $1, $2, $3, $4, $5, default, default)', [userInfo.username, userInfo.email, hash, userInfo.first_name, userInfo.last_name]).then(function() {
+          res.json({status: 'OK'});
+      }).catch(function(err){
+          console.log(err);
+          res.json({status: 'Failed', error: err.message});
+      });
     }
-    //Returns success response
-    res.json({status: 'OK'});
   });
 });
 
