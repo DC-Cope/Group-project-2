@@ -1,9 +1,18 @@
 <div class="container">
- <form class="login-form" ng-submit="submitLogin()">
-   Email <br>
-   <input type="email" ng-model="email" placeholder="Email"><br>
-   Password <br>
-   <input type="password" ng-model="password" placeholder="Password"><br>
-   <input type="submit" value="Login">
- </form>
+  <div class="jumbotron">
+    <form class="login-form text-center">
+      Email <br>
+      <input type="email" ng-model="email" placeholder="email"><br><br>
+      Password <br>
+      <input type="password" ng-model="password" placeholder="password"><br><br>
+      <input class="btn btn-success" type="submit" value="Login" ng-click="submitLogin()">
+      &nbsp; &nbsp;
+      <input class="btn btn-warning" type="submit" value="SOS" ng-click="chat()">
+    </form>
+  </div>
 </div>
+<style media="screen">
+  body {
+    background: teal;
+  }
+</style>

@@ -3,16 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>cope</title>
+    <script src="jquery.js"></script>
     <script src="angular.js"></script>
     <script src="angular-ui-router.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
-    <!-- <script type="js/jquery.js"></script> -->
+    <script src="/socket.io/socket.io.js"></script>
     <script src="frontend.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
-  <body ng-app="cope">
-    <h1>Hello</h1>
-    <ui-view></ui-view>
+  <body>
+    <div class="row">
+      <div class="col-xs-12 nav">
+        <img src="cope.png" width="200px" alt="logo" />
+      </div>
+    </div>
+
+    <div ng-app="cope">
+      <ui-view></ui-view>
+    </div>
+    <!-- <div id="contentWrap">
+      <div id="chatWrap">
+        <div id="chat">
+          <ul id="messages"></ul>
+        </div>
+        <form id="sendMessage">
+          <input size="35" id="m" autocomplete="off" /><button>Send</button>
+        </form>
+      </div>
+      <div id="userlist"></div>
+    </div> -->
+
+
   </body>
 </html>

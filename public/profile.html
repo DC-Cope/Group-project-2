@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <h2>{{first_name}} {{last_name}}</h2>
+      <div class="info-margin">
+        <ul>
+          <li>Email: {{email}}</li>
+          <li>Username: {{username}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="pull-left special-margin">
+        <!-- <button class="btn btn-default">Change Password</button> -->
+        <button class="btn btn-default">Edit Profile</button>
+        <!-- <button class="btn btn-danger">Delete Profile</button> -->
+        <button class="btn btn-default">View Logged Conversations</button>
+        <!-- <button class="btn btn-primary" ng-click="logout()">Log Out</button> -->
+      </div>
+      <div class="pull-right">
+        <button class="btn btn-warning btn-lg" ng-click="speakerChat()">I need to talk</button>
+        &nbsp;
+        <button class="btn btn-success btn-lg" ng-click="listenerChat()">I'm here to listen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+body {
+  background-color: teal;
+}
+li {
+  list-style-type: none;
+}
+.special-margin {
+  margin-top: 5px;
+}
+ul {
+  padding: 0;
+}
+</style>
