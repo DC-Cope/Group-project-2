@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chat</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="nickWrap">
+      <p>Enter username:</p>
+      <p id="nickError"></p>  <!--Shows error message  -->
+      <form id="setNick">
+        <input size="35" id="nickname"></input>
+        <input type="submit"></input>
+      </form>
+    </div>
+
+    <div id="contentWrap">
+      <div class="chatWrap"> <!--wrappped to float users div to right -->
+        <div id="chat"></div>
+        <form id="send-message">
+          <input size="35" id="message"></input>
+          <input type="submit"></input>
+        </form>
+      </div>
+      <div id="users"></div>
+    </div>
+
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <!-- <script type="text/javascript" src="/js/chat-ui.js"></script> -->
+    <script>
+      jQuery(function($) {
+        var socket = io.connect();
+        var $nickForm = $('#setNick');
+        var $nickError = $('#nickError');
+        var $nickBox = $('#nickname');
+        var $users = $('#users');
+        var $messageForm = $('#send-message');
+        var $messageBox = $('#message');
+        var $chat = $('#chat');
+
+        $nickForm.submit(function(e){
+          e.preventDefault();
+          socket.emit('new user', $nickBox.val(), function(data){ //callback to handle error(receives true or false) from backend
+            if(data) {
+              $('#nickWrap').hide();
+              $('#contentWrap').show();
+            } else {
+              $nickError.html('That username is already taken.  Try again');
+            }
+          });
+          $nickBox.val('');  //clears the nickname box
+        });
+
+        //Adds nicknames to list
+        socket.on('usernames', function(data){
+          var html = '';
+          for (i=0; i < data.length; i++) {
+            html += data[i] + '<br/>'
+          }
+          $users.html(html);
+        });
+
+        $messageForm.submit(function(e) {
+          e.preventDefault();
+          //Makes sure there is text in the message before submitting
+          if($messageBox.val().length > 0) {
+            socket.emit('send message', $messageBox.val());
+            console.log($messageBox.val().length);
+            $messageBox.val('');
+          }
+        });
+
+        socket.on('new message', function(data){
+          console.log('got new message', data);
+          $chat.append('<b>' + data.nick + ': </b>' + data.msg + '<br/>');
+        });
+
+
+
+    });
+    </script>
+  </body>
+</html>

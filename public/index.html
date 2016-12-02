@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>cope</title>
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="angular-ui-router.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="frontend.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <div ng-app="cope"> <!-- moved ng-app up to encompass logout button-->
+    <div class="row">
+      <div class="col-xs-12 nav">
+        <a ui-sref="home"><img class="logo" src="cope.png" width="200px" alt="logo" /></a>
+
+        <!-- <button class="btn btn-primary pull-right" ng-click="login()">Login</button>
+        <button class="btn btn-info pull-right" ng-click="signup()">Signup</button>
+        <button ng-show="online" class="btn btn-primary pull-right" ng-click="logout()" >Log Out</button> -->
+        <ul>
+          <li><a ng-hide="online" ui-sref="login" ng-click="login()">login</a></li>
+          <li><a ng-hide="online" ui-sref="signup"ng-click="signup()">sign up</a></li>
+          <li><a ng-show="online" ng-click="logout()">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+      <ui-view></ui-view>
+    </div>
+    <style media="screen">
+      /*.logo {
+        margin: 6px 22px;
+      }
+      div.col-xs-12.nav {
+        border-bottom: 2px solid black;
+      }
+      ul {
+        float: right;
+        margin: 27px 34px;
+      }
+      li {
+        display: inline;
+        list-style-type: none;
+        padding: 10px;
+      }
+      li.message-li {
+        display: block !important;
+      }
+      ul#messages  {
+        position: absolute;
+        left: 0;
+        color: #1ABB9B;
+      }
+      #sendMessage {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 1.5px;
+      }
+      a:hover {
+        text-decoration: none;
+        color: #1ABB9B;
+      }
+      a:active {
+        text-decoration: none;
+      }
+      a:visited {
+        text-decoration: none;
+      }*/
+    </style>
+
+
+  </body>
+</html>

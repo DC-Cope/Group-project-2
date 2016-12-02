@@ -1,0 +1,15 @@
+{
+  "name": "cope-app",
+  "version": "0.0.1",
+  "description": "Cope's socket.io chat app",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
+    "express": "^4.10.2",
+    "http": "0.0.0",
+    "pg-promise": "^5.4.5",
+    "socket.io": "^1.7.1",
+    "uuid": "^3.0.1"
+  }
+}
