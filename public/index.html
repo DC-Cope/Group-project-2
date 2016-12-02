@@ -23,8 +23,8 @@
         <button class="btn btn-info pull-right" ng-click="signup()">Signup</button>
         <button ng-show="online" class="btn btn-primary pull-right" ng-click="logout()" >Log Out</button> -->
         <ul>
-          <li><a ng-click="login()">login</a></li>
-          <li><a ng-click="signup()">sign up</a></li>
+          <li><a ui-sref="login" ng-click="login()">login</a></li>
+          <li><a ui-sref="signup"ng-click="signup()">sign up</a></li>
           <li><a ng-show="online" ng-click="logout()">Log Out</a></li>
         </ul>
       </div>
