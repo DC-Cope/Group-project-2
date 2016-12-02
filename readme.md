@@ -20,8 +20,23 @@ For those who feel thoughts or circumstances weighing on them, it is a simple an
 ## First & Subsequent Steps
 The landing page for the site gives you a brief description of our goal and the option of either signing up or logging in.
 
+(screentshot)
+
 Once logged in as someone seeking help, you can either view your profile page, which will give you the option of viewing previous conversations you have had that you chose to keep, or of going directly to talk with someone via the "SOS" button.
+
+(screentshot)
 
 If you log in as someone interested in helping, you will be taken first to your profile page where you can edit your basic information, then from there you will be dropped into a "pool" of listeners who are ready to be paired with those seeking help as soon as you are needed.
 
-##
+(screentshot)
+
+## Eventual Stretch Goals
+There are many things we'd like to add to the project, and it will likely be an ever growing list, but a few of those goals are:
+* The ability to save conversations when you want to
+* Flashing beacons to signify available "listeners" (people who want to listen and help)
+* Groups of both "listeners" and "speakers" (those who are seeking help and advice) based on their background or the type of help they need/can provide., such as:
+  * Veterans
+  * Parents
+  * Recovering alcoholics
+  * Recovering addicts
+These are only a few of the stretch goals we have in mind, and we will update the list as we accomplish each of the above goals.
