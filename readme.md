@@ -14,27 +14,33 @@ This project covered a lot of uncharted territory for our team. We were all fami
 ### Individual Contributions
 We were a small team, and had to carefully divvy up the workload to bring the project to fruition. We spent the first day familiarizing ourselves with the basics of SocketIO by following tutorials on the Socket.io website and a good tutorial series we found on YouTube by [Smitha Milli](https://www.youtube.com/watch?v=pNKNYLv2BpQ&index=32&list=WL&t=648s). The next day we split up, with Matt delving deeper into SocketIO documentation in order to build up the specific functionality we were looking for, while Autumn and I tried to learn as much about NodeJS as we could. Throughout the project we all tried to write as much well commented code as we could so that subsequent readers could follow our thinking, and also to improve our own understanding of all that we were doing. Day three had us bringing our two halves of the project together, which was fun, if not somewhat frustrating at times. The greatest difficulty we had was on day four, when we deployed the project through Amazon Web Services. We had deployed sites previously, but only with Python and Flask apps. Deploying with NodeJS was not vastly different, but we still experienced many setbacks. Ultimately we got the site up and running, while still maintaining the basic functionality we had achieved in the development stage. Some difficulties arose in finding the proper packages via npm and in working with different branches through github.
 
+Here is a little snippet of some of Matt's SocketIO code:
+
+# ![Code Snippet](public/code-snippet.png)
+
 ## How It Works
 For those who feel thoughts or circumstances weighing on them, it is a simple and easy process to signup and be paired with someone who is ready and willing to help and listen. Similarly, for those who wish to help people in need, the process is similarly quick and streamlined.
 
 ## First & Subsequent Steps
 The landing page for the site gives you a brief description of our goal and the option of either signing up or logging in.
 
-(screentshot)
+# ![Homepage](public/homepage.png)
+
+# ![Login](public/login.png)
 
 Once logged in as someone seeking help, you can either view your profile page, which will give you the option of viewing previous conversations you have had that you chose to keep, or of going directly to talk with someone via the "SOS" button.
 
-(screentshot)
+# ![Profile](public/profile.png)
 
 If you log in as someone interested in helping, you will be taken first to your profile page where you can edit your basic information, then from there you will be dropped into a "pool" of listeners who are ready to be paired with those seeking help as soon as you are needed.
 
-(screentshot)
+# ![Chatroom Example](public/chat-V1.png)
 
 ## Eventual Stretch Goals
 There are many things we'd like to add to the project, and it will likely be an ever growing list, but a few of those goals are:
 * The ability to save conversations when you want to
 * Flashing beacons to signify available "listeners" (people who want to listen and help)
-* Groups of both "listeners" and "speakers" (those who are seeking help and advice) based on their background or the type of help they need/can provide., such as:
+* Groups of both "listeners" and "speakers" (those who are seeking help and advice) based on their background or the type of help they need/can provide, such as:
   * Veterans
   * Parents
   * Recovering alcoholics
