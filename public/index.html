@@ -23,8 +23,8 @@
         <button class="btn btn-info pull-right" ng-click="signup()">Signup</button>
         <button ng-show="online" class="btn btn-primary pull-right" ng-click="logout()" >Log Out</button> -->
         <ul>
-          <li><a ui-sref="login" ng-click="login()">login</a></li>
-          <li><a ui-sref="signup"ng-click="signup()">sign up</a></li>
+          <li><a ng-hide="online" ui-sref="login" ng-click="login()">login</a></li>
+          <li><a ng-hide="online" ui-sref="signup"ng-click="signup()">sign up</a></li>
           <li><a ng-show="online" ng-click="logout()">Log Out</a></li>
         </ul>
       </div>
@@ -34,20 +34,33 @@
       <ui-view></ui-view>
     </div>
     <style media="screen">
-      .logo {
+      /*.logo {
         margin: 6px 22px;
       }
       div.col-xs-12.nav {
         border-bottom: 2px solid black;
       }
       ul {
-        float: right !important;
+        float: right;
         margin: 27px 34px;
       }
       li {
         display: inline;
         list-style-type: none;
         padding: 10px;
+      }
+      li.message-li {
+        display: block !important;
+      }
+      ul#messages  {
+        position: absolute;
+        left: 0;
+        color: #1ABB9B;
+      }
+      #sendMessage {
+        position: fixed;
+        bottom: 0;
+        right: 0;
       }
       a {
         text-decoration: none;
@@ -59,6 +72,12 @@
         text-decoration: none;
         color: #1ABB9B;
       }
+      a:active {
+        text-decoration: none;
+      }
+      a:visited {
+        text-decoration: none;
+      }*/
     </style>
 
 

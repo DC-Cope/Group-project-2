@@ -3,7 +3,11 @@
 <div class="container main-page">
     <!-- <div class="jumbotron"> -->
     <h1 class="title">An app for when you just need to talk to somebody</h1>
-
+    <div class="marker">
+      <div class="dot"></div>
+      <div class="pulse"></div>
+    </div>
+    <!-- not working because inside another div? -->
       <!-- <div class="text-center">
         <button class="btn btn-primary" ng-click="login()">Login</button>
         <button class="btn btn-info" ng-click="signup()">Signup</button>
@@ -27,7 +31,7 @@
 </div>
 
 <style media="screen">
-  .main-page {
+  /*.main-page {
     background-image: url(city1.jpg);
     background-size: cover;
     width: 100%;
@@ -50,8 +54,104 @@
       font-family: 'Open Sans', sans-serif;
       color: black;
       text-align: center;
+    }*/
+
+    /*********pulse dot styling*********/
+    /*.marker {
+      margin-top: 180px;
+      margin-left: 30px;
+      position: absolute;
+      background: #45453f;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transform: rotateX(60deg);
+      -moz-transform-style: preserve-3d;
+      -moz-transform: rotateX(60deg);
     }
 
+    .pulse {
+      width: 10px;
+      height: 10px;
+      border: 5px solid #27e1bc;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius: 30px;
+      background-color: #1ABB9B;
+      z-index: 10;
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transform: rotateX(60deg);
+      -moz-transform-style: preserve-3d;
+      -moz-transform: rotateX(60deg);
+    }
 
+    .dot {
+      border: 10px solid #1ABB9B;
+      background: transparent;
+      -webkit-border-radius: 60px;
+      -moz-border-radius: 60px;
+      border-radius: 60px;
+      height: 50px;
+      width: 50px;
+      -webkit-animation: pulse 3s ease-out;
+      -moz-animation: pulse 3s ease-out;
+      animation: pulse 3s ease-out;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      position: absolute;
+      top: -25px;
+      left: -25px;
+      z-index: 1;
+      opacity: 0;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transform: rotateX(60deg);
+      -moz-transform-style: preserve-3d;
+      -moz-transform: rotateX(60deg);
+    }
 
+    @-moz-keyframes pulse {
+     0% {
+        -moz-transform: scale(0);
+        opacity: 0.0;
+     }
+     25% {
+        -moz-transform: scale(0);
+        opacity: 0.1;
+     }
+     50% {
+        -moz-transform: scale(0.1);
+        opacity: 0.3;
+     }
+     75% {
+        -moz-transform: scale(0.5);
+        opacity: 0.5;
+     }
+     100% {
+        -moz-transform: scale(1);
+        opacity: 0.0;
+     }
+    }
+
+    @-webkit-keyframes "pulse" {
+     0% {
+        -webkit-transform: scale(0);
+        opacity: 0.0;
+     }
+     25% {
+        -webkit-transform: scale(0);
+        opacity: 0.1;
+     }
+     50% {
+        -webkit-transform: scale(0.1);
+        opacity: 0.3;
+     }
+     75% {
+        -webkit-transform: scale(0.5);
+        opacity: 0.5;
+     }
+     100% {
+        -webkit-transform: scale(1);
+        opacity: 0.0;
+     }
+    }*/
 </style>

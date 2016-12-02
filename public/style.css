@@ -1,11 +1,201 @@
+body {
+  background-color: teal;
+  font-family: 'Open Sans', sans-serif;
+}
 .nav {
   background-color: white;
+  width: 100%;
 }
-/*p {
-  font-family: 'Open Sans', sans-serif;
-  color: white;
-  font-size: 11em;
-}*/
 .jumbotron {
   margin-top: 25px;
 }
+.logo {
+  margin: 6px 22px;
+}
+div.col-xs-12.nav {
+  border-bottom: 2px solid black;
+}
+ul {
+  float: right;
+  margin: 27px 34px;
+}
+li {
+  display: inline;
+  list-style-type: none;
+  padding: 10px;
+}
+li.message-li {
+  display: block !important;
+}
+ul#messages  {
+  position: absolute;
+  left: 0;
+  color: #FFF;
+}
+#sendMessage {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1.5px;
+}
+a:hover {
+  text-decoration: none;
+  color: #1ABB9B;
+}
+a:active {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+.main-page {
+  background-color: white !important;
+  background-image: url(city1.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  opacity: 0.6;
+}
+.about {
+  background-color: teal;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  text-align: center;
+}
+.icons {
+  width: 120px;
+  display: block;
+  margin: auto;
+}
+.title {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  text-align: center;
+}
+.login {
+  height: 100vh;
+  background-color: teal;
+}
+.signup {
+  height: 100vh;
+  background-color: teal;
+}
+.profile {
+  height: 100vh;
+  background-color: teal;
+}
+.chat {
+  height: 100vh;
+  background-color: teal;
+}
+/*.chat-window {
+  border: 1px solid white;
+  width: 300px;
+}*/
+
+
+
+
+/*********pulse dot styling*********/
+/*.marker {
+  margin-top: 180px;
+  margin-left: 30px;
+  position: absolute;
+  background: #45453f;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateX(60deg);
+  -moz-transform-style: preserve-3d;
+  -moz-transform: rotateX(60deg);
+}
+
+.pulse {
+  width: 10px;
+  height: 10px;
+  border: 5px solid #27e1bc;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-color: #1ABB9B;
+  z-index: 10;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateX(60deg);
+  -moz-transform-style: preserve-3d;
+  -moz-transform: rotateX(60deg);
+}
+
+.dot {
+  border: 10px solid #1ABB9B;
+  background: transparent;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  height: 50px;
+  width: 50px;
+  -webkit-animation: pulse 3s ease-out;
+  -moz-animation: pulse 3s ease-out;
+  animation: pulse 3s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateX(60deg);
+  -moz-transform-style: preserve-3d;
+  -moz-transform: rotateX(60deg);
+}
+
+@-moz-keyframes pulse {
+ 0% {
+    -moz-transform: scale(0);
+    opacity: 0.0;
+ }
+ 25% {
+    -moz-transform: scale(0);
+    opacity: 0.1;
+ }
+ 50% {
+    -moz-transform: scale(0.1);
+    opacity: 0.3;
+ }
+ 75% {
+    -moz-transform: scale(0.5);
+    opacity: 0.5;
+ }
+ 100% {
+    -moz-transform: scale(1);
+    opacity: 0.0;
+ }
+}
+
+@-webkit-keyframes "pulse" {
+ 0% {
+    -webkit-transform: scale(0);
+    opacity: 0.0;
+ }
+ 25% {
+    -webkit-transform: scale(0);
+    opacity: 0.1;
+ }
+ 50% {
+    -webkit-transform: scale(0.1);
+    opacity: 0.3;
+ }
+ 75% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.5;
+ }
+ 100% {
+    -webkit-transform: scale(1);
+    opacity: 0.0;
+ }
+}*/
