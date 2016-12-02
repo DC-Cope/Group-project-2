@@ -1,11 +1,76 @@
-<div id="contentWrap">
-  <div id="chatWrap">
-    <div id="chat">
-      <ul id="messages"></ul>
+<div class="row">
+  <div class="col-xs-8">
+    <div id="contentWrap">
+      <div id="chatWrap">
+        <div id="chat">
+          <ul id="messages"></ul>
+        </div>
+        <form id="sendMessage">
+          <input size="35" id="m" autocomplete="off" /><button class="btn btn-primary" >Send</button>
+        </form>
+      </div>
     </div>
-    <form id="sendMessage">
-      <input size="35" id="m" autocomplete="off" /><button>Send</button>
-    </form>
   </div>
-  <div id="userlist"></div>
+  <div class="col-xs-4">
+    <div id="userlist"></div>
+  </div>
 </div>
+<style media="screen">
+  body {
+    background-color: teal;
+    font-family: 'Open Sans', sans-serif;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    form.send-msg {
+        background: #000;
+        padding: 3px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    form input {
+        border: 0;
+        padding: 10px;
+        width: 90%;
+        margin-right: .5%;
+    }
+    ul#messages  {
+      float: none !important;
+      color: #1ABB9B;
+    }
+    #chat li {
+        padding: 5px 10px;
+    }
+
+    #chat li:nth-child(odd) {
+        background: #eee;
+    }
+
+    #chatWrap {
+      float: left;
+      border: 1px solid black;
+      height: 100%;
+      width: 50%;
+    }
+
+    #contentWrap {
+      display: none;
+      border: 1px solid black;
+    }
+
+    #nickWrap {
+      width: 300px;
+    }
+
+    #chat {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    /*remove display inline and float right*/
+</style>

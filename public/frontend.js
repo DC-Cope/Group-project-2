@@ -39,12 +39,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
 app.factory('copeService', function($http, $cookies, $rootScope, $state) {
   var service = {};
 
+
 // logout function
   $rootScope.logout = function() {
     var cookies = $cookies.getAll();
     angular.forEach(cookies, function (v, k ){
         $cookies.remove(k);
     });
+    $rootScope.online = false;
     $state.go('home');
   };
 
@@ -73,6 +75,7 @@ app.factory('copeService', function($http, $cookies, $rootScope, $state) {
       $cookies.putObject('last_name', loggedIn.last_name);
       $cookies.putObject('token', loggedIn.token);
       console.log("logged in");
+      $rootScope.online = true;
     });
   };
 
@@ -94,7 +97,6 @@ app.controller('ChatController', function($scope, copeService, $stateParams, $st
     $scope.listener = $cookies.getObject('listener');
     $scope.paired = $cookies.getObject('paired');
     socketChat($scope.username, $scope.listener, $scope.paired);
-    //deleted copeService.login();
 });
 
 app.controller('ProfileController', function($scope, copeService, $stateParams, $state, $cookies, $rootScope) {
@@ -156,8 +158,13 @@ app.controller('LoginController', function($scope, copeService, $stateParams, $s
       $state.go('profile');
     });
   };
-
   $scope.chat = function() {
+    $scope.first_name = $cookies.getObject('first_name');
+    $scope.last_name = $cookies.getObject('last_name');
+    $scope.email = $cookies.getObject('email');
+    $scope.username = $cookies.getObject('username');
+    $cookies.putObject('paired', true);
+    $state.go('chat');
     console.log("SOS");
   };
 });

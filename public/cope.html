@@ -1,17 +1,57 @@
-<h1>blurb about what this is about</h1>
+<!-- <h1>For When You Just Need To Talk To Somebody</h1> -->
+
 <div class="container main-page">
-  <div class="jumbotron">
-    <div class="text-center">
-      <button class="btn btn-primary" ng-click="login()">Login</button>
-      <button class="btn btn-info" ng-click="signup()">Signup</button>
-      <button class="btn btn-warning">SOS</button>
-    </div>
+    <!-- <div class="jumbotron"> -->
+    <h1 class="title">An app for when you just need to talk to somebody</h1>
+
+      <!-- <div class="text-center">
+        <button class="btn btn-primary" ng-click="login()">Login</button>
+        <button class="btn btn-info" ng-click="signup()">Signup</button>
+      </div> -->
+    <!-- </div> -->
+</div>
+<div class="row about" id="about">
+  <div class="col-xs-4">
+    <img class="icons" src="earth.png" alt="earth" />
+    <p class="about">We match empathetic listeners with speakers in need.</p>
+  </div>
+  <div class="col-xs-4">
+    <img class="icons" src="convo.png" alt="convo" />
+    <p class="about">
+        Speakers are instantly placed in a chatroom.  Listeners enter a chatroom with other listeners until they are paired with a speaker.</p>
+  </div>
+  <div class="col-xs-4">
+    <img class="icons" src="alert.png" alt="alert" />
+    <p class="about">Use the SOS button to be instantly connected with a listener.</p>
   </div>
 </div>
+
 <style media="screen">
   .main-page {
-    background-image: url(cityscape.jpg);
+    background-image: url(city1.jpg);
     background-size: cover;
     width: 100%;
-  }
+    height: 500px;
+    opacity: 0.7;
+    /*background-color: rgba(255,255,255,0.5);*/
+   }
+   .about {
+     background-color: teal;
+     font-family: 'Open Sans', sans-serif;
+     color: white;
+     text-align: center;
+   }
+   .icons {
+    width: 120px;
+    display: block;
+    margin: auto;
+    }
+    .title {
+      font-family: 'Open Sans', sans-serif;
+      color: black;
+      text-align: center;
+    }
+
+
+
 </style>
