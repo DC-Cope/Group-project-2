@@ -186,6 +186,7 @@ function getParameterByName(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+
 var socketChat = function(username, listener, paired) {
   var socket = io();
   var $messageForm = $('#sendMessage');
